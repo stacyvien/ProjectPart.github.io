@@ -1,115 +1,210 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/main.css">
-    <script src="JS/Jquery.js" charset="utf-8"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-  </head>
-  <title>Design Studios</title>
-<body>
-  <div class="container">
-    <header>
-    <div class="nav-bar">
-    <h1>Design Studios</h1>
 
-    
-    <nav>
-    <ul class="nav" id="menu">
-      <li class="nav-item">
-        <a data-toggle="tab" href="#home">Home</a></li>
-      <li class="nav-item">
-        <a  data-toggle="tab" href="#about">About Us</a></li>
-      <li class="nav-item">
-        <a  data-toggle="tab" href="#services">Services</a></li>
-      <li class="nav-item">
-        <a data-toggle="tab" href="#portfolio">Portfolio</a></li>
-      <li class="nav-item">
-        <a  data-toggle="tab" href="#contact">Contact Us</a></li>
-    </nav>
-      <img src="images/ic_menu_white_18dp.png" alt="menu" class="menu-icon" onclick="togglemenu()"></li>
-    </div>
+ body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.8em;
+  justify-content: center;
   
-  </header>
+}
+ 
+ /* Navigation menu */
 
-<div class="article">
-  <h1>Clean <span class="stylized">&amp;</span> Professional Web Design</h1>
-        <h2>Providing High Quality Web Solutions</h2>
-        <p>We provide <strong>first class</strong> web solutions for organizations and small businesses looking to make a <strong>big impact</strong> online.  Our services include web design, online marketing campaigns, and search engine optimization.</p>
+ .logo{
+   width: 120px;
+   cursor: pointer;
+   margin: 30px 0;
+ }
 
-<div class="row" id="webdesign">
-  <div class="col-sm-4">
-    <div class="card text-center" style="background-color: #00aeef; color: white;">
-      <div class="card-body">
-        <h1 class="card-title">web design</h1>
-        <p class="card-text">We provide web design solutions of the very highest order.  We'll work with you from the start to understand your requirements and will continuously work with you to ensure that you're happy with the final site that you purchased.</p>
-        <a href="#" class="btn btn-primary" id="button">GET MORE DETAILS>>></a>
-      </div>
-    </div>
-  </div>
-  <div class="col-sm-4">
-    <div class="card text-center" style="background-color: #00aeef; color: white;">
-      <div class="card-body">
-        <h1 class="card-title">marketing</h1>
-        <p class="card-text">We provide web design solutions of the very highest order.  We'll work with you from the start to understand your requirements and will continuously work with you to ensure that you're happy with the final site that you purchased.</p>
-        <a href="#" class="btn btn-primary" style="background-color: #0076a3;">GET MORE DETAILS>>></a>
-      </div>
-    </div>
-  </div>
-  <div class="col-sm-4">
-    <div class="card text-center" style="background-color: #00aeef; color: white;">
-      <div class="card-body">
-        <h1 class="card-title">optimization</h1>
-        <p class="card-text">We provide web design solutions of the very highest order.  We'll work with you from the start to understand your requirements and will continuously work with you to ensure that you're happy with the final site that you purchased.</p>
-        <a href="#" class="btn btn-primary" style="background-color: #0076a3;">GET MORE DETAILS>>></a>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
+ .menu-icon{
+   width: 40px;
+   cursor: pointer;
+   display: none;
+ }
+
+.navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+nav{
+  flex: 1;
+  text-align: right;
+}
+
+nav ul li{
+  list-style: none;
+  display: inline-block;
+  margin-left: 30px ;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 25px;
+}
+
+@media only screen and (max-width:700px) {
+  nav ul {
+    width: 100%;
+    background: linear-gradient(rgb(235, 232, 232), rgb(161, 159, 159));
+    position: absolute;
+    top: 115px;
+    right: 0;
+    z-index: 2;
+  }
+
+  nav ul li {
+    display: inline-block;
+    margin-top: 2px;
+    margin-bottom: 2px;
+  }
+
+  nav ul li a{
+    color: rgb(31, 30, 30);
+  }
+
+  .menu-icon{
+    display: block;
+  }
+
+  #menu{
+    overflow: hidden;
+    transition: 0.5s;
+  }
+
+  .row{
+    width: 100%;
+  }
 
 
-    <div class="row" id="featuredSections">
-      <div class="col" id="testimonials">
-        <h1>Client Testimonials</h1>
-        <div class="col">
-      <img src="images/client.jpg" alt="Client" class="client">
-      </div>
-      <div class="col">
-      <blockquote class="blackquote">
-        "Design Studios created a beautiful website and were a pleasure to work with during the whole process."
-      <p><span class="clientName">Sarah Johnson</span><br><span class="clientCompany">Web Design Media</span></p>
-      </blockquote>
-      </div>
-      <img src="images/client.jpg" alt="Client" class="client">
-      <blockquote class="blackquote">
-        "Design Studios created a beautiful website and were a pleasure to work with during the whole process."
-      <p><span class="clientName">Sarah Johnson</span><br><span class="clientCompany">Web Design Media</span></p>
-      </blockquote>
-      </div>
-      <div class="col" id="featured">Featured Project</div>
-    </div>
+}
 
-</div>
+  /* Change the link color to #111 (black) on hover */
+  nav ul li a:hover {
+    color: #04AA6D; 
+  }
 
-<script>
-	var menu = document.getElementById("menu");
+   /* HOME CONTENT*/
+   #homepics{
+    display: flex;
+  }
 
-	menu.style.maxHeight = "0px";
+  .home{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+  }
 
-	function togglemenu(){
-		if(menu.style.maxHeight == "0px"){
-			menu.style.maxHeight = "130px";
-		} 
-		else{
-			menu.style.maxHeight = "0px";
-		}
-	}
-</script>
-  
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-  </body>
-</html>
+  #h3{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #333;
+    text-align: center;
+  }
+
+/* GALLERY CONTENT*/
+
+#picrow{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 2px;
+}
+
+#column img {
+  vertical-align: middle;
+  width: 100%;
+}
+
+@media screen and (max-width: 800px) {
+#column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+/* CONTACT CONTENT*/
+
+#btn {
+  background-color: #04AA6D;
+  margin-top: 15px;
+  color: white;
+  padding: 10px 40px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#info{
+  margin-top: 40px;
+}
+
+
+.col {
+  margin-top: 7px;
+}
+
+.row {
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+  /* ABOUT CONTENT*/
+
+  #john{
+    margin-top: 10px;
+  }
+
+  h1,h2 {
+    padding-top: 1%;
+    font-family: 'Playfair Display', serif;
+    font-weight: 300;
+  }
+
+  h3 {
+    height: 40px;
+    font-family: 'Montagu Slab', serif;
+    font-size: .9em;
+    font-style: italic;
+    font-weight: lighter;
+  }
+
+  .bg{
+    justify-content: flex-start;
+    padding-right: 1.5em;
+    font-family: 'Playfair Display', serif;
+  }
+
+  .pg{
+    text-align: justify;
+    font-weight: bold;
+    font-size: x-large;
+    line-height: 2rem;
+  }
+
+   /*footer*/
+  #footer{
+    margin-top: 1em;
+    border-top: 2px ridge #ccc;
+    padding: 1em;
+  }
+
+
+ 
